@@ -63,7 +63,7 @@ pub enum ApiErrorKind {
     #[fail(display = "{}", _0)]
     Db(#[cause] DbError),
 
-    #[fail(display = "HAWK authentication error: {}", _0)]
+    #[fail(display = "HAWK authentication error :( : {}", _0)]
     Hawk(#[cause] HawkError),
 
     #[fail(display = "No app_data ServerState")]

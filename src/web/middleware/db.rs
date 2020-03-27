@@ -71,7 +71,7 @@ where
 
     fn call(&mut self, sreq: ServiceRequest) -> Self::Future {
         let no_agent = HeaderValue::from_str("NONE")
-            .expect("Could not get no_agent in DbTransactionMiddleware::call");
+            .expect("Could not get no_agent in DbTransactionMiddleware::call Baz");
         let useragent = sreq
             .headers()
             .get("user-agent")

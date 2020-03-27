@@ -1345,7 +1345,7 @@ impl FromRequest for BsoQueryParams {
                     } else if let Some(older) = params.older {
                         if bound > older.as_i64() {
                             return Err(ValidationErrorKind::FromDetails(
-                                "Invalid Offset".to_owned(),
+                                "Invalid Offset Quux".to_owned(),
                                 RequestErrorLocation::QueryString,
                                 Some("older".to_owned()),
                                 None,

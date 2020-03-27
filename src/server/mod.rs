@@ -167,7 +167,7 @@ impl Server {
             build_app!(state, limits)
         })
         .bind(format!("{}:{}", settings.host, settings.port))
-        .expect("Could not get Server in Server::with_settings")
+        .expect("Could not get Server in Server::with_settings!")
         .run();
         Ok(server)
     }
