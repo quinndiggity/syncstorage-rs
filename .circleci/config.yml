@@ -134,12 +134,12 @@ jobs:
       - setup-rust
       - setup-gcp-grpc
       # XXX: currently the time needed to setup-sccache negates its savings
-      #- setup-sccache
-      #- restore-sccache-cache
+      - setup-sccache
+      - restore-sccache-cache
       - write-version
       - cargo-build
       - run-tests
-      #- save-sccache-cache
+      - save-sccache-cache
       - setup_remote_docker
       - run:
           name: Build Docker image
